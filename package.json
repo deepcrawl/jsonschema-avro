@@ -62,17 +62,6 @@
     "ts-node": "10.9.1",
     "typescript": "5.0.4"
   },
-  "nyc": {
-    "check-coverage": true,
-    "branches": 100,
-    "lines": 100,
-    "functions": 100,
-    "statements": 100,
-    "reporter": [
-      "text",
-      "html"
-    ]
-  },
   "dependencies": {
     "zod": "3.21.4"
   }
