@@ -6,6 +6,10 @@
 .nyc_output
 .nycrc.json
 coverage
-.eslintrc.json
+.eslintrc.js
+.eslintignore
+.mocharc.json
+tsconfig.json
 .prettierignore
 .prettierrc.json
+src
