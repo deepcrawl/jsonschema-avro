@@ -1,9 +1,11 @@
 import { JSONSchema } from './types/json-schema'
 import { idToName, idToNameSpace } from './lib/idUtils'
 import { convertProperties } from './lib/convertProperties'
-import { schema as avsc } from 'avsc'
+import { AvroSchema } from './types/avro/avro'
 
-function convert(jsonSchema?: JSONSchema): avsc.AvroSchema {
+export * from './types/avro/avro'
+
+function convert(jsonSchema?: JSONSchema): AvroSchema {
   if (!jsonSchema) {
     throw new Error('No schema given')
   }

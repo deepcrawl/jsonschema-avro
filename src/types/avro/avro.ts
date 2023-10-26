@@ -19,6 +19,7 @@ export interface AvroSchemaRecordType {
   doc?: string
   aliases?: string[]
   fields: AvroSchemaField[]
+  [key: string]: unknown
 }
 export interface AvroSchemaArrayType {
   type: 'array'
@@ -35,3 +36,32 @@ export type AvroSchemaArrayField = AvroSchemaField & {
 }
 export type AvroSchemaType = AvroDefinedType | AvroDefinedType[]
 export type AvroDefinedType = avsc.PrimitiveType | AvroComplexType | string
+
+export interface AvroBaseSchema {
+  name: string
+  namespace?: string
+  doc?: string
+}
+export type AvroArraySchema = AvroBaseSchema & AvroSchemaArrayType
+export type AvroSchema = AvroArraySchema | AvroSchemaRecordType
+
+export function isAvroRecordSchema(
+  schema: AvroSchema,
+): schema is AvroSchemaRecordType {
+  return (
+    (<AvroSchemaRecordType>schema).name !== undefined &&
+    ((<AvroSchemaRecordType>schema).type === 'record' ||
+      (<AvroSchemaRecordType>schema).type === 'error') &&
+    Array.isArray((<AvroSchemaRecordType>schema).fields)
+  )
+}
+
+export function isAvroArraySchema(
+  schema: AvroSchema,
+): schema is AvroArraySchema {
+  return (
+    (<AvroArraySchema>schema).type === 'array' &&
+    (<AvroArraySchema>schema).name !== undefined &&
+    (<AvroArraySchema>schema).items !== undefined
+  )
+}
