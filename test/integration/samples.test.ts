@@ -15,14 +15,16 @@ describe('samples', () => {
         let expected: string
         let result: avsc.AvroSchema
 
-        before(() => {
+        before(async () => {
           if (process.env.ONLY && dir !== process.env.ONLY) {
             return
           }
           // eslint-disable-next-line @typescript-eslint/no-var-requires
           const inJson = require(`../../${sampleDir}/${dir}/input.json`)
           expected = require(`../../${sampleDir}/${dir}/expected.json`)
-          result = convert(inJson)
+          result = await convert(inJson, {
+            deReferenceJsonSchema: dir === 'de-reference',
+          })
         })
 
         it('converts to avro', function () {
