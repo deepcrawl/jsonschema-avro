@@ -1,0 +1,32 @@
+{
+  "id": "http://yourdomain.com/schemas/myschema.json",
+  "$ref": "#/definitions/testDefinition",
+  "definitions": {
+    "testDefinition": {
+      "type": "object",
+      "properties": {
+        "propA": {
+          "type": "string"
+        },
+        "propB": {
+          "type": "number"
+        },
+        "properties": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "nestedPropA": {
+                "type": "string"
+              },
+              "nestedPropB": {
+                "type": "boolean"
+              }
+            },
+            "required": ["nestedPropA"]
+          }
+        }
+      }
+    }
+  }
+}

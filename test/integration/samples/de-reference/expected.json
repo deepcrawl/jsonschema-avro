@@ -1,0 +1,42 @@
+{
+  "namespace": "com.yourdomain.schemas",
+  "name": "myschema_json",
+  "type": "record",
+  "fields": [
+    {
+      "type": ["null", "string"],
+      "name": "propA",
+      "default": null
+    },
+    {
+      "type": ["null", "double"],
+      "name": "propB",
+      "default": null
+    },
+    {
+      "name": "properties",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": {
+            "type": "record",
+            "fields": [
+              {
+                "type": "string",
+                "name": "nestedPropA"
+              },
+              {
+                "type": ["null", "boolean"],
+                "name": "nestedPropB",
+                "default": null
+              }
+            ],
+            "name": "properties_record"
+          }
+        }
+      ],
+      "default": null
+    }
+  ]
+}
