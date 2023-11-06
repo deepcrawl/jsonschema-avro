@@ -23,9 +23,7 @@
                 "type": "boolean"
               }
             },
-            "required": [
-              "nestedPropA"
-            ]
+            "required": ["nestedPropA"]
           }
         }
       }

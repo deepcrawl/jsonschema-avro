@@ -4,18 +4,12 @@
   "type": "record",
   "fields": [
     {
-      "type": [
-        "null",
-        "string"
-      ],
+      "type": ["null", "string"],
       "name": "propA",
       "default": null
     },
     {
-      "type": [
-        "null",
-        "double"
-      ],
+      "type": ["null", "double"],
       "name": "propB",
       "default": null
     },
@@ -33,10 +27,7 @@
                 "name": "nestedPropA"
               },
               {
-                "type": [
-                  "null",
-                  "boolean"
-                ],
+                "type": ["null", "boolean"],
                 "name": "nestedPropB",
                 "default": null
               }
