@@ -60,5 +60,9 @@
   "dependencies": {
     "@json-schema-tools/dereferencer": "1.6.1",
     "zod": "3.21.4"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
