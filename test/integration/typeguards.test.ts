@@ -1,5 +1,5 @@
 import assert from 'assert'
-import convert, { isAvroArraySchema, isAvroRecordSchema } from '../../src'
+import { convert, isAvroArraySchema, isAvroRecordSchema } from '../../src'
 import * as fs from 'fs'
 import * as path from 'path'
 import { AvroSchema } from '../../src/types/avro/avro'

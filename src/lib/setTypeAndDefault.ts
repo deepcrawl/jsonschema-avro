@@ -1,7 +1,7 @@
 import { AvroSchemaField } from '../types/avro/avro'
 import { JSONSchema } from '../types/json-schema'
 import { mapType } from './mapType'
-import { schema as avsc } from 'avsc'
+import type { schema as avsc } from 'avsc'
 
 export function setTypeAndDefault<
   T extends {

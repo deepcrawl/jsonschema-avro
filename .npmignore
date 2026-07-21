@@ -15,3 +15,4 @@ tsconfig.json
 src
 test
 dist/test
+tsdown.config.mts

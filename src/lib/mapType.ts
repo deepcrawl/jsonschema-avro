@@ -1,5 +1,5 @@
 import { AvroSchemaField } from '../types/avro/avro'
-import { schema as avsc } from 'avsc'
+import type { schema as avsc } from 'avsc'
 
 const typeMapping: { [k: string]: string | undefined } = {
   string: 'string',

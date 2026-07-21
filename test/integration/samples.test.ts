@@ -1,7 +1,7 @@
 import { schema as avsc } from 'avsc'
 import assert from 'assert'
 import { readdirSync } from 'fs'
-import convert from '../../src'
+import { convert } from '../../src'
 
 describe('samples', () => {
   describe('convert()', () => {
