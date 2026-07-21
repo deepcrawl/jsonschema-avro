@@ -1,5 +1,5 @@
 import { JSONSchemaEnum } from '../types/json-schema'
-import { schema as avsc } from 'avsc'
+import type { schema as avsc } from 'avsc'
 import { JSONSchema4Type, JSONSchema6Type, JSONSchema7Type } from 'json-schema'
 import { AvroSchemaField } from '../types/avro/avro'
 import { setTypeAndDefault } from './setTypeAndDefault'

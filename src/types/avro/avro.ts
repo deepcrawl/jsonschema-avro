@@ -1,4 +1,4 @@
-import { schema as avsc } from 'avsc'
+import type { schema as avsc } from 'avsc'
 
 /**
  * Subset of Avro types used in the conversion from JSON schema to Avro schema

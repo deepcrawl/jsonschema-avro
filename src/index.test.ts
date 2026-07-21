@@ -1,5 +1,5 @@
 import assert from 'assert'
-import convert from './index'
+import { convert } from './index'
 
 describe('index', () => {
   describe('convert()', () => {

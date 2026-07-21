@@ -1,5 +1,12 @@
 # Changelog
 
+## v4.0.0 (21/07/2026)
+
+- Dual CJS/ESM output via tsdown with a package.json `exports` map; `import` now receives genuine ESM (the default export is the convert function under Node ESM interop, fixing `TypeError: ... is not a function` in ESM consumers).
+- `convert` is also available as a named export.
+- JSON Schema types (`JSONSchema`, `JSONSchema4`, ...) are re-exported from the package root; deep imports into `dist/src/...` are no longer possible (breaking).
+- Unwrapped the CJS default export of `@json-schema-tools/dereferencer` so `deReferenceJsonSchema: true` works from the ESM build.
+
 ## v2.1.0 (13/05/2023)
 
 - Doc property removed from array types. (frk-dc)
