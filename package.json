@@ -1,6 +1,6 @@
 {
   "name": "@deepcrawl/jsonschema-avro",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Convert JSON-schema into avro schema",
   "main": "dist/index.cjs",
   "scripts": {
