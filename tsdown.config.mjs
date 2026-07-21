@@ -1,6 +1,7 @@
-import { defineConfig } from 'tsdown'
-
-export default defineConfig({
+/**
+ * @type {import('tsdown').UserConfig}
+ */
+export default {
   entry: ['./src/index.ts'],
   format: ['cjs', 'esm'],
   target: 'es2022',
@@ -14,4 +15,4 @@ export default defineConfig({
     // bundler rejects — keep the import unresolved in the emitted output.
     neverBundle: ['avsc'],
   },
-})
+}
