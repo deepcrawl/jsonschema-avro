@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.1.0 (21/07/2026)
+
+- Version-specific JSON Schema types (`JSONSchema4`, `JSONSchema6`, `JSONSchema7` and their zod schemas) are re-exported from the package root.
+
 ## v4.0.0 (21/07/2026)
 
 - Dual CJS/ESM output via tsdown with a package.json `exports` map; `import` now receives genuine ESM (the default export is the convert function under Node ESM interop, fixing `TypeError: ... is not a function` in ESM consumers).

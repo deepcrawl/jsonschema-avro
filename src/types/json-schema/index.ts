@@ -13,6 +13,10 @@ import {
   JSONSchema7TypeNameSchema,
 } from './json-schema-v7.type'
 
+export * from './json-schema-v4.type'
+export * from './json-schema-v6.type'
+export * from './json-schema-v7.type'
+
 /**
  * Validation for JSON schemas
  * @see https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/json-schema/index.d.ts
